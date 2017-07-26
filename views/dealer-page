@@ -1,0 +1,7 @@
+<main>
+	{{>chartPage}}
+	<form action="getDealer();">
+		Dealership:<input id="dealerShip" type="text" name="Dealership"></input>
+		<input type="submit" value="Submit">
+	</form>
+</main>

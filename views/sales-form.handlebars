@@ -1,0 +1,29 @@
+<main>
+<h1>{{title}}</h1>
+<p>{{pageEx}}</p>
+<p>
+	{{>saleChar}}
+</p>
+
+<div class="formCont">
+	<p>Sale</p>
+	<ul>
+		<li>Dealer ID:<input id="dealer" type="text"></li>
+		<li>Customer ID:<input id="customerId" type="text"></li>
+		<li>Employee ID:<input id="employeeId" type="text"></li>
+		<li>Car ID: <input id="carId" type="text"></li>
+		<li>Final Price: <input id="finalPrice" type="text"> </li>
+		<li><button onclick="addSale()"> Submit </button> </li>
+	</ul>
+</div>
+
+<div class="formCont">
+	<p>Add Customer</p>
+	<ul>
+		<li>First Name:<input id="c_f_name" type="text"></li>
+		<li>Last Name:<input id="c_l_name" type="text"></li>
+		<li>Address:<input id="address" type="text"></li>
+		<li>Phone Number:<input id="phoneNumber" type= "text"></li>
+		<li><button onclick="addCustomer();">Submit</button></li>
+	</ul>
+</div>

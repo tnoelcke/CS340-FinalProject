@@ -1,0 +1,78 @@
+<p> DealerShips</p>
+<table class="center">
+	<tr> 
+		<th> Dealer Ship Name </th>
+		<th> Dealer Ship ID </th>
+	</tr>
+{{#each dealer}}
+	<tr>
+		<td>{{name}}</td>
+		<td>{{id}}</td>
+	</tr>
+{{/each}}
+</table>
+<p>Customers</p>
+<table class="center">
+	<tr>
+		<th>ID</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Phone Number</th>
+		<th>Address</th>
+	</tr>
+	
+	{{#each customer}}
+		<tr>
+			<td> {{id}} </td>
+			<td> {{fname}} </td>
+			<td> {{lname}} </td>
+			<td> {{phone}} </td>
+			<td> {{address}}</td>
+		</tr>
+	{{/each}}
+</table>
+<p> Cars </p>
+<table class="center">
+	<tr>
+		<th>ID</th>
+		<th>Make</th>
+		<th>Model</th>
+		<th>Year</th>
+		<th>Color</th>
+		<th>MSRP</th>
+	<tr>
+	{{#each car}}
+		<tr>
+			<td>{{id}}</td>
+			<td>{{make}}</td>
+			<td>{{model}}</td>
+			<td>{{year}}</td>
+			<td>{{color}}</td>
+			<td>{{msrp}}</td>
+		</tr>
+	{{/each}}
+</table>
+<p>Employees</p>
+<table class="center">
+	<tr>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Id</th> 
+	</tr>
+	
+	{{#each employee}}
+		<tr> 
+			<td> {{fname}}</td>
+			<td> {{lname}}</td>
+			<td> {{id}}</td>
+		</tr>
+	{{/each}}
+</table>
+
+
+
+
+
+
+
+

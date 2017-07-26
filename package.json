@@ -1,0 +1,24 @@
+{
+  "name": "cs340_final",
+  "version": "1.0.0",
+  "description": "This file is for the CS340 final project. This web app manages car lots and is connected to an sql database.",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.6",
+    "mysql": "^2.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tnoelcke/cs340_final.git"
+  },
+  "author": "Thomas Noelcke",
+  "license": "UNLICENSED"
+}

@@ -1,0 +1,77 @@
+CREATE TABLE employee(
+	id int NOT NULL AUTO_INCREMENT,
+	f_name varchar(255) NOT NULL,
+	l_name varchar(255) NOT NULL,
+	position varchar(255),
+	address varchar(255),
+	start_data date NOT NULL,
+	PRIMARY KEY(id)
+)engine=innodb;
+
+CREATE TABLE dealership(
+	id int NOT NULL AUTO_INCREMENT,
+	name varchar(255) NOT NULL,
+	address varchar(255),
+	phonenumber varchar(30),
+	PRIMARY KEY(id),
+	CONSTRAINT uc_name UNIQUE(name)
+)engine=innodb;
+
+CREATE TABLE car (
+	id int NOT NULL AUTO_INCREMENT,
+	Make varchar(255),
+	Model varchar(255),
+	year int,
+	color varchar(255),
+	PRIMARY KEY(id)
+)engine=innodb;
+
+CREATE TABLE customer (
+	id int NOT NULL AUTO_INCREMENT,
+	f_name varchar(255) NOT NULL,
+	l_name varchar(255) NOT NULL,
+	address varchar(255),
+	phone_number varchar(255),
+	PRIMARY KEY(id)
+)engine=innodb;
+
+
+CREATE TABLE Employee_dealership (
+	eid int NOT NULL,
+	did int NOT NULL,
+	PRIMARY KEY(eid, did),
+	FOREIGN KEY(eid) REFERENCES employee(id),
+	FOREIGN KEY(did) REFERENCES dealership(id)
+)engine=innodb;
+
+CREATE TABLE dealer_car(
+	car_id int NOT NULL,
+	dealer_id int NOT NULL,
+	msrp int NOT NULL,
+	new boolean,
+	arived date,
+	PRIMARY KEY(car_id, dealer_id),
+	FOREIGN KEY(car_id) REFERENCES car(id),
+	FOREIGN KEY(dealer_id) REFERENCES dealership(id)
+)engine=innodb;
+
+CREATE TABLE customer_car (
+	car_id int NOT NULL,
+	cid int NOT NULL,
+	PRIMARY KEY(car_id, cid),
+	FOREIGN KEY(car_id) REFERENCES car(id),
+	FOREIGN KEY(cid) REFERENCES customer(id)
+)engine=innodb;
+
+create TABLE sale (
+	id int NOT NULL AUTO_INCREMENT,
+	eid int NOT NULL,
+	cid int NOT NULL,
+	car_id int NOT NULL,
+	sale_date date NOT NULL,
+	final_price int NOT NULL,
+	PRIMARY KEY(id),
+	FOREIGN KEY(eid) REFERENCES employee(id),
+	FOREIGN KEY(cid) REFERENCES customer(id),
+	FOREIGN KEY(car_id) REFERENCES car(id)
+)engine=innodb;
